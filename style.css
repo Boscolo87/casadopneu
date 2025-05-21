@@ -7,14 +7,14 @@ body {
   }
   
   header {
-    background-color: #111;
+    background-color: #000000;
     color: #fff;
     padding: 20px;
     text-align: center;
   }
   
   nav {
-    background-color: #222;
+    background-color: #e20909;
     padding: 10px;
     text-align: center;
   }
@@ -36,7 +36,7 @@ body {
   }
   
   footer {
-    background-color: #111;
+    background-color: #000000;
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -53,7 +53,7 @@ body {
     background-color: #c40000;
     color: white;
     border-radius: 5px;
-    text-decoration: none;
+    text-decoration: none;  
     transition: background-color 0.3s ease;
   }
   
@@ -66,4 +66,18 @@ body {
     height: auto;
     border-radius: 8px;
   }
+  
+
+  
+  body {
+  background-color: #f1f1f1; 
+  background-image: url('fundo.2.jpg'); 
+  background-size: 100%; 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: multiply;
+  
+  
+  }
+  
   
