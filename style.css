@@ -3,11 +3,11 @@ body {
     margin: 0;
     padding: 0;
     background: #f8f8f8;
-    color: #333;
+    color: #ffffff;
   }
   
   header {
-    background-color: #000000;
+    background-color: #474747;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -70,8 +70,8 @@ body {
 
   
   body {
-  background-color: #f1f1f1; 
-  background-image: url('fundo.2.jpg'); 
+  background-color: #e9e6e6; 
+  background-image: url('fundo.5.png'); 
   background-size: 100%; 
   background-repeat: no-repeat;
   background-position: center;
@@ -79,5 +79,16 @@ body {
   
   
   }
-  
-  
+  header {
+    background-color: #474747;
+    color: #fff;
+    padding: 20px;
+    position: relative;
+    height: 200px;
+
+    background-image: url('pneu.3.png'),
+    url('fundo.7.jpg');  
+    background-repeat: no-repeat;         
+    background-position: left center;    
+    background-size: 400px auto;          
+  }
