@@ -53,8 +53,9 @@ body {
     background-color: #c40000;
     color: white;
     border-radius: 5px;
-    text-decoration: none;  
+   
     transition: background-color 0.3s ease;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
   
   .button:hover {
@@ -71,9 +72,9 @@ body {
   
   body {
   background-color: #e9e6e6; 
-  background-image: url('fundo.5.png'); 
+  background-image: url('fundo.01.avif'); 
   background-size: 100%; 
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
   background-blend-mode: multiply;
   
