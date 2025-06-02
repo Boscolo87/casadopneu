@@ -14,17 +14,46 @@
 
 <body>
 
-  <header>
-  </header>
         
-  <main>
-    <nav>
-      <a href="#quem-somos">Quem Somos</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#publico">Público</a>
-      <a href="#promocoes">Promoções</a>
-      <a href="#contato">Contato</a>
-    </nav>
+ 
+    <main>
+    
+    
+      <!-- Carrossel -->
+      <section id="carrossel" style="position: relative; max-width: 200%; height: 300px; overflow: hidden; margin: 20px 0;">
+        <div id="slides" style="display: flex; transition: transform 0.8s ease-in-out;">
+          <img src="alinhamento.01.jpg" class="slide" style="min-width: 100%; height: 500px; object-fit: cover;" alt="Slide 1">
+          <img src="recalchutagem.jpg" class="slide" style="min-width: 100%; height: 500px; object-fit: cover;" alt="Slide 2">
+          <img src="alinhamento.webp" class="slide" style="min-width: 100%; height: 500px; object-fit: cover;" alt="Slide 3">
+          <img src="alinhamento.webp" class="slide" style="min-width: 100%; height: 500px; object-fit: cover;" alt="Slide 4">
+          <img src="alinhamento.webp" class="slide" style="min-width: 100%; height: 500px; object-fit: cover;" alt="Slide 5">
+        </div>
+        <button onclick="mudarSlide(-1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px;">❮</button>
+        <button onclick="mudarSlide(1)" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: rgb(255, 255, 255); border: none; padding: 10px;">❯</button>
+      </section>
+      <nav>
+        <a href="#quem-somos">Quem Somos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#publico">Público</a>
+        <a href="#promocoes">Promoções</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <script>
+        let slideIndex = 0;
+        const slidesContainer = document.getElementById('slides');
+        const totalSlides = slidesContainer.children.length;
+    
+        function mudarSlide(n) {
+          slideIndex = (slideIndex + n + totalSlides) % totalSlides;
+          slidesContainer.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+        }
+    
+        // Auto-slide a cada 5 segundos
+        setInterval(() => {
+          mudarSlide(1);
+        }, 5000);
+      </script>
+    
   
     <script>
       fetch('menu.html')
@@ -79,8 +108,8 @@
       <p>
         <strong>📍 Endereço:</strong> Rua Salvador, 1334 - Loteamento Planalto do Sol, Santa Bárbara d'Oeste - SP, 13454-355<br><br>
         <iframe
-    src="https://www.google.com/maps?q=Rua+Salvador+1334,+Santa+Barbara+d'Oeste,+SP&output=embed"width="1200" height="290"></iframe>
-    allowfullscreen>
+    src="https://www.google.com/maps?q=Rua+Salvador+1334,+Santa+Barbara+d'Oeste,+SP&output=embed"width="1200" height="300"></iframe>
+    
   </iframe><br><br>
         <strong>📱 WhatsApp:</strong> (19) 3626-2017<br><br>
         <strong>⏰ Atendimento:</strong> atendimento Das 8h às 18h 
@@ -98,7 +127,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Casa do Pneu. Todos os direitos reservados.</p>
+    <p>&copy; 2018 Casa do Pneu. Todos os direitos reservados.</p>
   </footer>
 
   <script src="script.js"></script>
