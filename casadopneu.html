@@ -13,63 +13,39 @@
 </head>
 
 <body>
-
-        
- 
-    <main>
-    
-    
-      <!-- Carrossel -->
-      <section id="carrossel" style="position: relative; max-width: 200%; height: 300px; overflow: hidden; margin: 20px 0;">
-        <div id="slides" style="display: flex; transition: transform 0.8s ease-in-out;">
-          <img src="alinhamento.01.jpg" class="slide" style="min-width: 100%; height: 500px; object-fit: cover;" alt="Slide 1">
-          <img src="recalchutagem.jpg" class="slide" style="min-width: 100%; height: 500px; object-fit: cover;" alt="Slide 2">
-          <img src="alinhamento.webp" class="slide" style="min-width: 100%; height: 500px; object-fit: cover;" alt="Slide 3">
-          <img src="alinhamento.webp" class="slide" style="min-width: 100%; height: 500px; object-fit: cover;" alt="Slide 4">
-          <img src="alinhamento.webp" class="slide" style="min-width: 100%; height: 500px; object-fit: cover;" alt="Slide 5">
-        </div>
-        <button onclick="mudarSlide(-1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px;">❮</button>
-        <button onclick="mudarSlide(1)" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: rgb(255, 255, 255); border: none; padding: 10px;">❯</button>
-      </section>
-      <nav>
+  <header class="topo">
+    <a href="casadopneu.html">
+      <img src="pneu.2.jpg" alt="Logo Casa do Pneu" class="logo">
+    </a>
+  </header>
+  
+  <main>
+    <header class="header">
+      <h1>Casa do Pneu</h1>
+      <nav class="nav">
         <a href="#quem-somos">Quem Somos</a>
         <a href="#servicos">Serviços</a>
         <a href="#publico">Público</a>
         <a href="#promocoes">Promoções</a>
         <a href="#contato">Contato</a>
       </nav>
-      <script>
-        let slideIndex = 0;
-        const slidesContainer = document.getElementById('slides');
-        const totalSlides = slidesContainer.children.length;
-    
-        function mudarSlide(n) {
-          slideIndex = (slideIndex + n + totalSlides) % totalSlides;
-          slidesContainer.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
-        }
-    
-        // Auto-slide a cada 5 segundos
-        setInterval(() => {
-          mudarSlide(1);
-        }, 5000);
-      </script>
-    
-  
-    <script>
-      fetch('menu.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('menu').innerHTML = data;
-        })
-        .catch(error => console.error('erro ao carregar o menu:', error));
+    </header>
 
-    </script>
+    <section id="carrossel" class="carrossel">
+      <div id="slides" class="slides">
+        <img src="alinhamento.01.jpg" class="slide" alt="Slide 1">
+        <img src="recalchutagem.jpg" class="slide" alt="Slide 2">
+        <img src="balanceamento.02.jpg" class="slide" alt="Slide 3">
+        <img src="balanceamento.jpg" class="slide" alt="Slide 4">
+        <img src="alinhamento.webp" class="slide" alt="Slide 5">
+      </div>
+      <button onclick="mudarSlide(-1)" class="carrossel-btn prev">❮</button>
+      <button onclick="mudarSlide(1)" class="carrossel-btn next">❯</button>
+    </section>
 
     <section id="quem-somos">
       <h2>Quem Somos</h2>
-      <p>Sou proprietário da Casa do Pneu, uma borracharia que atua há mais de 10 anos oferecendo soluções rápidas e
-        confiáveis. Nossa missão é garantir que ninguém fique na mão, seja na cidade ou na estrada.</p>
-
+      <p>Sou proprietário da Casa do Pneu, uma borracharia que atua há mais de 10 anos oferecendo soluções rápidas e confiáveis. Nossa missão é garantir que ninguém fique na mão, seja na cidade ou na estrada.</p>
     </section>
 
     <section id="servicos">
@@ -86,33 +62,30 @@
 
     <section id="publico">
       <h2>Nosso Público</h2>
-      <p>Atendemos motoristas de carros de passeio, motos, caminhonetes e veículos utilitários. Muitos dos nossos
-        clientes são motoristas de aplicativo, caminhoneiros e frotistas que buscam agilidade, preço justo e confiança
-        no serviço.</p>
+      <p>Atendemos motoristas de carros de passeio, motos, caminhonetes e veículos utilitários. Muitos dos nossos clientes são motoristas de aplicativo, caminhoneiros e frotistas que buscam agilidade, preço justo e confiança no serviço.</p>
     </section>
 
     <section id="diferencial">
       <h2>Nosso Diferencial</h2>
-      <p>Atendimento direto e sem enrolação. Trabalhamos com marcas de qualidade, preços acessíveis, serviço 24h na
-        região e formas de pagamento flexíveis: Pix, cartão e parcelamento em até 6x.</p>
+      <p>Atendimento direto e sem enrolação. Trabalhamos com marcas de qualidade, preços acessíveis, serviço 24h na região e formas de pagamento flexíveis: Pix, cartão e parcelamento em até 6x.</p>
     </section>
 
     <section id="promocoes">
       <h2>Promoções e Pagamento</h2>
       <p>Oferecemos descontos especiais e formas de pagamento facilitadas para ajudar seu bolso e sua segurança.</p>
-      <button class="button" onclick="showPromotion()">Ver Promoções</button>
+      <a href="promocoes.html" class="button">Ver Promoções</a>
+
     </section>
 
     <section id="contato">
       <h2>Contato</h2>
       <p>
         <strong>📍 Endereço:</strong> Rua Salvador, 1334 - Loteamento Planalto do Sol, Santa Bárbara d'Oeste - SP, 13454-355<br><br>
-        <iframe
-    src="https://www.google.com/maps?q=Rua+Salvador+1334,+Santa+Barbara+d'Oeste,+SP&output=embed"width="1200" height="300"></iframe>
-    
-  </iframe><br><br>
-        <strong>📱 WhatsApp:</strong> (19) 3626-2017<br><br>
-        <strong>⏰ Atendimento:</strong> atendimento Das 8h às 18h 
+        <iframe src="https://www.google.com/maps?q=Rua+Salvador+1334,+Santa+Barbara+d'Oeste,+SP&output=embed" width="100%" height="300"></iframe>
+        <br><br>
+        <strong>☎️ telefone:</strong> (19) 3626-2017<br><br>
+        <strong>⏰ Atendimento:</strong>seg à sex Das 8h às 18h
+        sábados das 9h às 13h 
       </p>
       <a href="https://wa.me/5519989191717" class="button" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
       <a href="https://www.instagram.com/casadopneu.sbo/" class="button" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
@@ -122,15 +95,26 @@
       <h2>Redes Sociais</h2>
       <p>Acompanhe a Casa do Pneu no Instagram e WhatsApp Business. Em breve também no Google Meu Negócio.</p>
     </section>
-
-    
   </main>
 
-  <footer>
+  <footer class="footer">
     <p>&copy; 2018 Casa do Pneu. Todos os direitos reservados.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    let slideIndex = 0;
+    const slidesContainer = document.getElementById('slides');
+    const totalSlides = slidesContainer.children.length;
+
+    function mudarSlide(n) {
+      slideIndex = (slideIndex + n + totalSlides) % totalSlides;
+      slidesContainer.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+    }
+
+    setInterval(() => {
+      mudarSlide(1);
+    }, 5000);
+  </script>
 </body>
 
 </html>
